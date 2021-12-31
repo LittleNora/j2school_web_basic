@@ -1,0 +1,10 @@
+Làm regex để lấy username (hoặc id) từ các link sau:
+
+https://www.facebook.com/j2teamnnl/
+
+https://www.facebook.com/groups/j2team.community/
+
+https://www.facebook.com/profile.php?id=100048240755558
+
+    Regex_1: [^(?:http|https):\/\/(?:www.)?facebook.com\/(?:groups\/|profile.php\?id=)?][a-z0-9.]+
+    Regex_2: [^(?:http|https):\/\/(?:www.)?facebook.com\/(?:groups\/|profile.php\?id=)?][\w.]+[^\/][^https:\/]

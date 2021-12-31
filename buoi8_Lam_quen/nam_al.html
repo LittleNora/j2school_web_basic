@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Tính lịch âm" />
+    <meta property="og:description" content="Tính lịch âm by Nov" />
+    <meta property="og:image"
+        content="https://lh3.googleusercontent.com/cyRsjYVxxUE1ByU2quYSLwAA9c2ZZQNjzCv0v8-xmux6rL7L8c7OUzFhQe0ZxqFvSw-nu-nMpskwoO0mhWdK6GR_1IdEYYXntPt4jT-CtfW9WBoGcWl8VK_8M28wxcICHXV8pKsidXGmGJR2EzZ1u10t6RFMQv6CKeRY4QN47kQJZcpC0l4J4juE1V3k3F5HI_AhntRMGT_Y-922v6C1vt3ugZl54mzu5cfkzki5SiVudxaSaNkJsN3JkIZG7K11rOyA5_UAnIe8isfk4z2lBUvrOyeGcEtVlbz9hoYVNtmwgRbyRAVp3sVBJDiMbeuVwSCNt2thA8uAj53V4yyvvIBEqROoQqH6nUDj3IGCm-w3dLL_FXpnMa56qEVwqxCTMnP-rdUmpa73vuRopU2ID8-Z1dSVGLtfdhTtzVWsWqaR0hG0EAOR9vk0cbc1jhuKrFJn4tS-zJ8_mYeV3GKIl60j_miy9UBl5sSkVKF77tLH4qGT8d1Am4JXp9LxXT2Gy1MMwv-wxZPLUT0j1iHvRKL7uEFfVCOj7dIuOMRwcwzk1q1mDMBk0D3sRNsiV9X1at8sW4ffXe6iyiF-ddgfX1soZYsubSQAiNjL-OjwoJXDIJyg_HJ0K8CG1215JcanGiAiUD42dtZoe_RgCKNDJ0Sboq4nlMTzWi3xy4CJF2Y5CNZF3dd9oR9A6qzcu8VmC6cjyEd1WyMUpMkHRh5Q6dk1Og=s893-no?authuser=0" />
+
+    <link rel="icon"
+        href="https://lh3.googleusercontent.com/kP-FeQ-aIcFRfRAXCndPYaxYTqte29fyP_BbJMgLGodQW_kufSKIbXBNNKyCFTShetRqwiG5w6Lzu9Sfhm1oJY9unKuS4WSFsswZBV-L5HyOsWRR95aouJzGJRvO5aSLZPd-HlyJh50DnyFPMbOYbAo71DM18NdunrjhJfyoFAlY-_261lqAHID0nRXgu7LSYb7QLYsTtRuqUTUBIwbNNXehHp5r89KCqb2X4ybia8jmytQdQSZJ23cL4t7Nrui5vyfG2cLGGQX2RrajeXz_ZLraXC3yo_ddapE1FpxMbZp0rcNxtxa1BooAsvddMLMEoGmc-sIzVJMQHlUhKZDKP8xLR8bTPp5F2KfTiJmQv3q4__PXpLj-husfT3ShAtnYBknpHaw82R29s1XmSgyB_WlPO5dgKxuSvafuwXSxNM4nfy9HjMidrOIXmMyO2HcH7C2AzCht7dicX0KWf-69MLKR08ZiQO5qGdW1pzb8xXsKH30Ql9GSkZUM4s466_L6iOTwe6b8Xl1MYmN5VVpqeM_EXL6J56QpoXK2Ml5Ng04nf7NsvDNHpnRGHAxbQoKIvEs1CIPOQ8g7QxqLEfQnlAq4MFEkBUGIDhN3IIA6XCJVx2S7p1sq0Bk11zh0q3CwHhiygRu8m1ZDjbRRYBWOhteB-qiaXnJxt-EY11zdfvXFBmwN0mIMwwdEamd7nrpoZMLyzY1kUw3oafaI1ffG3kohcQ=w620-h558-no?authuser=0"
+        type="image/x-icon">
+
+    <title>Tính năm âm lịch</title>
+    <style>
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            border: 3px solid red;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .heading_text {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 3px solid red;
+            color: green;
+        }
+
+        .input {
+            margin-top: 10px;
+        }
+
+        .input input {
+            width: 40%;
+            border: 3px solid red;
+            border-radius: 5px;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .content_1 {
+            display: inline-flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        #button {
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: aquamarine;
+            border: none;
+            cursor: pointer;
+            color: blue;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        #output {
+            text-align: center;
+            width: 40%;
+            height: 31px;
+            background-color: #fff;
+            border-radius: 5px;
+            line-height: 25px;
+            font-size: 20px;
+            margin-top: 10px;
+            float: right;
+            border: 3px solid red;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body style="background-color: pink;">
+    <div id="container">
+        <div class="form">
+            <div class="heading">
+                <h1 class="heading_text">Chương trình tính năm âm lịch</h3>
+            </div>
+            <div class="input">
+                <div class="content_1">
+                    <input class="content" type="number" placeholder="Năm dương lịch" id="nam_dl">
+                    <button type="button" class="content" id="button" onclick="tinh_nam()">=></button>
+                    <p class="content" id="output">Kết quả</p>
+                </div>
+            </div>
+            <script>
+                function tinh_nam() {
+                    let nam_dl = parseInt(document.getElementById("nam_dl").value);
+                    let so_du_can = (nam_dl - 3) % 10;
+                    let so_du_chi = (nam_dl - 3) % 12;
+                    let can, chi, nam_al;
+                    switch (so_du_can) {
+                        case 0:
+                            can = 'Quý';
+                            break;
+                        case 1:
+                            can = 'Giáp';
+                            break;
+                        case 2:
+                            can = 'Ất';
+                            break;
+                        case 3:
+                            can = 'Bính';
+                            break;
+                        case 4:
+                            can = 'Đinh';
+                            break;
+                        case 5:
+                            can = 'Mậu';
+                            break;
+                        case 6:
+                            can = 'Kỷ';
+                            break;
+                        case 7:
+                            can = 'Canh';
+                            break;
+                        case 8:
+                            can = 'Tân';
+                            break;
+                        case 9:
+                            can = 'Nhâm';
+                            break;
+                    }
+
+                    switch (so_du_chi) {
+                        case 0:
+                            chi = 'Hợi';
+                            break;
+                        case 1:
+                            chi = 'Tý';
+                            break;
+                        case 2:
+                            chi = 'Sửu';
+                            break;
+                        case 3:
+                            chi = 'Dần';
+                            break;
+                        case 4:
+                            chi = 'Mão';
+                            break;
+                        case 5:
+                            chi = 'Thìn';
+                            break;
+                        case 6:
+                            chi = 'Tỵ';
+                            break;
+                        case 7:
+                            chi = 'Ngọ';
+                            break;
+                        case 8:
+                            chi = 'Mùi';
+                            break;
+                        case 9:
+                            chi = 'Thân';
+                            break;
+                        case 10:
+                            chi = 'Dậu';
+                            break;
+                        case 11:
+                            chi = 'Tuất';
+                            break;
+                    }
+
+                    nam_al = can + ' ' + chi;
+                    document.getElementById('output').innerHTML = nam_al;
+                }
+                var input = document.getElementById("nam_dl");
+                input.addEventListener("keyup", function (event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("button").click();
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Validate Form" />
+    <meta property="og:description" content="Validate Form by Nov" />
+    <meta property="og:image"
+        content="https://lh3.googleusercontent.com/cyRsjYVxxUE1ByU2quYSLwAA9c2ZZQNjzCv0v8-xmux6rL7L8c7OUzFhQe0ZxqFvSw-nu-nMpskwoO0mhWdK6GR_1IdEYYXntPt4jT-CtfW9WBoGcWl8VK_8M28wxcICHXV8pKsidXGmGJR2EzZ1u10t6RFMQv6CKeRY4QN47kQJZcpC0l4J4juE1V3k3F5HI_AhntRMGT_Y-922v6C1vt3ugZl54mzu5cfkzki5SiVudxaSaNkJsN3JkIZG7K11rOyA5_UAnIe8isfk4z2lBUvrOyeGcEtVlbz9hoYVNtmwgRbyRAVp3sVBJDiMbeuVwSCNt2thA8uAj53V4yyvvIBEqROoQqH6nUDj3IGCm-w3dLL_FXpnMa56qEVwqxCTMnP-rdUmpa73vuRopU2ID8-Z1dSVGLtfdhTtzVWsWqaR0hG0EAOR9vk0cbc1jhuKrFJn4tS-zJ8_mYeV3GKIl60j_miy9UBl5sSkVKF77tLH4qGT8d1Am4JXp9LxXT2Gy1MMwv-wxZPLUT0j1iHvRKL7uEFfVCOj7dIuOMRwcwzk1q1mDMBk0D3sRNsiV9X1at8sW4ffXe6iyiF-ddgfX1soZYsubSQAiNjL-OjwoJXDIJyg_HJ0K8CG1215JcanGiAiUD42dtZoe_RgCKNDJ0Sboq4nlMTzWi3xy4CJF2Y5CNZF3dd9oR9A6qzcu8VmC6cjyEd1WyMUpMkHRh5Q6dk1Og=s893-no?authuser=0" />
+
+    <link rel="icon"
+        href="https://lh3.googleusercontent.com/kP-FeQ-aIcFRfRAXCndPYaxYTqte29fyP_BbJMgLGodQW_kufSKIbXBNNKyCFTShetRqwiG5w6Lzu9Sfhm1oJY9unKuS4WSFsswZBV-L5HyOsWRR95aouJzGJRvO5aSLZPd-HlyJh50DnyFPMbOYbAo71DM18NdunrjhJfyoFAlY-_261lqAHID0nRXgu7LSYb7QLYsTtRuqUTUBIwbNNXehHp5r89KCqb2X4ybia8jmytQdQSZJ23cL4t7Nrui5vyfG2cLGGQX2RrajeXz_ZLraXC3yo_ddapE1FpxMbZp0rcNxtxa1BooAsvddMLMEoGmc-sIzVJMQHlUhKZDKP8xLR8bTPp5F2KfTiJmQv3q4__PXpLj-husfT3ShAtnYBknpHaw82R29s1XmSgyB_WlPO5dgKxuSvafuwXSxNM4nfy9HjMidrOIXmMyO2HcH7C2AzCht7dicX0KWf-69MLKR08ZiQO5qGdW1pzb8xXsKH30Ql9GSkZUM4s466_L6iOTwe6b8Xl1MYmN5VVpqeM_EXL6J56QpoXK2Ml5Ng04nf7NsvDNHpnRGHAxbQoKIvEs1CIPOQ8g7QxqLEfQnlAq4MFEkBUGIDhN3IIA6XCJVx2S7p1sq0Bk11zh0q3CwHhiygRu8m1ZDjbRRYBWOhteB-qiaXnJxt-EY11zdfvXFBmwN0mIMwwdEamd7nrpoZMLyzY1kUw3oafaI1ffG3kohcQ=w620-h558-no?authuser=0"
+        type="image/x-icon">
+
+    <title>Validate Form</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main {
+            background-color: #fefefe;
+            height: 270px;
+            width: 450px;
+            padding: 32px;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(0,0,0,.13);
+        }
+
+        .form_heading h1 {
+            font-weight: 300;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .form_input {
+            width: 100%;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .form_input input[type="text"],
+        .form_input input[type="email"],
+        .form_input input[type="password"] {
+            font-size: 16px;
+            outline: none;
+            border: 1px solid red;
+            border-radius: 3px;
+            margin-left: 3px;
+            width: 180px;
+        }
+
+        .form_input_desc {
+            width: 30%;
+        }
+
+        #button {
+            font-size: 20px;
+        }
+
+        .loi {
+            position: absolute;
+            right: -27px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="form_heading">
+            <h1>Validate Form</h2>
+        </div>
+        <div class="form">
+            <form>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Tên
+                    </span>
+                    <input type="text" id="input_ten" name="name" placeholder="Nguyễn Duy Quang Vinh">
+                    <span id="loi_ten" class="loi"></span>
+                </div>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Giới tính
+                    </span>
+                    <input type="radio" name="gioi_tinh" id="input_gioi_tinh">Nam
+                    <input type="radio" name="gioi_tinh" id="input_gioi_tinh">Nữ
+                    <span id="loi_gioi_tinh" class="loi"></span>
+                </div>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Địa chỉ
+                    </span>
+                    <input type="text" id="input_dia_chi" name="address" placeholder="Thanh Ba - Phú Thọ">
+                    <span id="loi_dia_chi" class="loi"></span>
+                </div>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Email
+                    </span>
+                    <input type="email" id="input_email" name="email" placeholder="abc@xyz.qwe">
+                    <span id="loi_email" class="loi"></span>
+                </div>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Mật khẩu
+                    </span>
+                    <input type="password" name="password" id="input_mat_khau" placeholder="8 ký tự trở nên">
+                    <span id="loi_mat_khau" class="loi"></span>
+                </div>
+                <div class="form_input">
+                    <span class="form_input_desc">
+                        Sở thích
+                    </span>
+                    <input type="checkbox" class="input_so_thich" name="so_thich">Game
+                    <input type="checkbox" class="input_so_thich" name="so_thich">Nhảy dây
+                    <input type="checkbox" class="input_so_thich" name="so_thich">Nghe nhạc
+                    <span id="loi_so_thich" class="loi" style="bottom: 52px;"></span>
+                </div>
+                <button type="submit" onclick="return kiem_tra()" id="button">Nhập</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function kiem_tra() {
+            let kiem_tra_loi = false;
+
+            //Tên
+            ten = document.getElementById("input_ten").value;
+            if (ten.length === 0) {
+                document.getElementById("loi_ten").innerHTML = 'Tên không được để trống.'
+                kiem_tra_loi = true;
+            }
+            else {
+                let regex_ten = /^[A-Z][a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]{1,6}(?: [A-Z][a-zàáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹý]{1,6})*$/;
+                if (regex_ten.test(ten) == false) {
+                    document.getElementById("loi_ten").innerHTML = 'Tên không hợp lệ.'
+                    kiem_tra_loi = true; 
+                }
+                else{
+                    document.getElementById("loi_ten").innerHTML = ' '
+                }
+            }
+
+            //Giới tính
+            let gioi_tinh = document.getElementsByName("gioi_tinh");
+            let kiem_tra_gioi_tinh = false;
+            for (let i = 0; i < gioi_tinh.length; i++){
+                if(gioi_tinh[i].checked) {
+                    kiem_tra_gioi_tinh = true;
+                }
+            }
+            if (kiem_tra_gioi_tinh == false){
+                document.getElementById("loi_gioi_tinh").innerHTML = 'Giới tính không được để trống.'
+                kiem_tra_loi = true;
+            } else {
+                document.getElementById("loi_gioi_tinh").innerHTML = ''
+            }
+
+            //Địa chỉ
+            let dia_chi = document.getElementById("input_dia_chi").value;
+            if (dia_chi.length === 0) {
+                document.getElementById("loi_dia_chi").innerHTML = 'Địa chỉ không được trống.';
+                kiem_tra_loi = true;
+            } else{
+                document.getElementById("loi_dia_chi").innerHTML = '';
+            }
+
+            //Email
+            let email = document.getElementById("input_email").value;
+            if (email.length === 0) {
+                document.getElementById("loi_email").innerHTML = 'Email không được trống.';
+                kiem_tra_loi = true;
+            }else{
+                document.getElementById("loi_email").innerHTML = '';
+            }
+
+            //Mật khẩu
+            let mat_khau = document.getElementById("input_mat_khau").value;
+            if (mat_khau.length === 0) {
+                document.getElementById("loi_mat_khau").innerHTML = 'Mật khẩu không trống.';
+                kiem_tra_loi = true;
+            } else if (mat_khau.length < 8) {
+                document.getElementById("loi_mat_khau").innerHTML = 'Mật khẩu ngắn.';
+                kiem_tra_loi = true;
+            } else{
+                document.getElementById("loi_mat_khau").innerHTML = '';
+            }
+
+            //Sở thích
+            let so_thich = document.getElementsByName("so_thich");
+            let kiem_tra_so_thich = false;
+            for (let i = 0; i < so_thich.length; i++){
+                if(so_thich[i].checked) {
+                    kiem_tra_so_thich = true;
+                }
+            }
+            if (kiem_tra_so_thich == false){
+                document.getElementById("loi_so_thich").innerHTML = 'Hãy chọn sở thích.'
+                kiem_tra_loi = true;
+            } else {
+                document.getElementById("loi_so_thich").innerHTML = ''
+            }
+
+            if (kiem_tra_loi = true) {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
